@@ -21,6 +21,7 @@
 
     <!-- ===============================================--><!--    Stylesheets--><!-- ===============================================-->
     <link href="../assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
+    <link href="../assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
     <link href="../vendors/simplebar/simplebar.min.css" rel="stylesheet">
@@ -28,8 +29,6 @@
     <link href="../assets/css/user.min.css" rel="stylesheet" id="user-style-default">
     <link href="../assets/fonts/iconsmind/iconsmind.css" rel="stylesheet">
     <link href="../vendors/hamburgers/hamburgers.css" rel="stylesheet">
-    <link href="../assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
-    <link href="../assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
   </head>
 
   <body>
@@ -510,9 +509,17 @@
     <script src="../vendors/popper/popper.min.js"></script>
     <script src="../vendors/bootstrap/bootstrap.min.js"></script>
     <script src="../vendors/is/is.min.js"></script>
+    <script src="../vendors/imagesloaded/imagesloaded.pkgd.js"> </script>
     <script src="../vendors/typed.js/typed.umd.js"></script>
     <script src="../vendors/isotope-layout/isotope.pkgd.min.js"> </script>
     <script src="../vendors/isotope-packery/packery-mode.pkgd.min.js"></script>
+    <script>
+      const styleDefault = document.querySelector('link#style-default');
+      const userStyleDefault = document.querySelectorAll('link#user-style-default')
+
+      styleDefault?.parentNode?.removeChild(styleDefault);
+      userStyleDefault?.parentNode?.removeChild(userStyleDefault);
+    </script>
     <script src="../vendors/fontawesome/all.min.js"></script>
     <script src="../vendors/lodash/lodash.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
