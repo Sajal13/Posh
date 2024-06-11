@@ -17,7 +17,6 @@
     <link rel="manifest" href="../assets/images/favicons/manifest.json">
     <meta name="msapplication-TileImage" content="../assets/images/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
-    <script src="../assets/js/config.js"></script>
     <script src="../vendors/simplebar/simplebar.min.js"></script>
 
     <!-- ===============================================--><!--    Stylesheets--><!-- ===============================================-->
@@ -30,21 +29,6 @@
     <link href="../vendors/hamburgers/hamburgers.css" rel="stylesheet">
     <link href="../assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
     <link href="../assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
-    <script>
-      var isRTL = JSON.parse(localStorage.getItem('isRTL'));
-      if (isRTL) {
-        var linkDefault = document.getElementById('style-default');
-        var userLinkDefault = document.getElementById('user-style-default');
-        linkDefault.setAttribute('disabled', true);
-        userLinkDefault.setAttribute('disabled', true);
-        document.querySelector('html').setAttribute('dir', 'rtl');
-      } else {
-        var linkRTL = document.getElementById('style-rtl');
-        var userLinkRTL = document.getElementById('user-style-rtl');
-        linkRTL.setAttribute('disabled', true);
-        userLinkRTL.setAttribute('disabled', true);
-      }
-    </script>
   </head>
 
   <body>
@@ -390,7 +374,7 @@
             </div><!-- end of .container-->
           </section><!-- <section> close ============================--><!-- ============================================-->
 
-          <footer class="footer bg-1100 text-400 fs-10 fw-semi-bold py-3">
+          <footer class="bg-1100 text-400 fs-10 fw-semi-bold py-3">
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-auto">&copy; 2024 POSH &trade; Inc. </div>

@@ -73,18 +73,6 @@ var getColors = function getColors(dom) {
     emphasis: getColor('emphasis-color', dom)
   };
 };
-var getSubtleColors = function getSubtleColors(dom) {
-  return {
-    primary: getColor('primary-bg-subtle', dom),
-    secondary: getColor('secondary-bg-subtle', dom),
-    success: getColor('success-bg-subtle', dom),
-    info: getColor('info-bg-subtle', dom),
-    warning: getColor('warning-bg-subtle', dom),
-    danger: getColor('danger-bg-subtle', dom),
-    light: getColor('light-bg-subtle', dom),
-    dark: getColor('dark-bg-subtle', dom)
-  };
-};
 var getGrays = function getGrays(dom) {
   return {
     100: getColor('gray-100', dom),
@@ -145,12 +133,7 @@ var getBreakpoint = function getBreakpoint(el) {
   }
   return breakpoint;
 };
-var getSystemTheme = function getSystemTheme() {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-};
-var isDark = function isDark() {
-  return localStorage.getItem('theme') === 'auto' ? getSystemTheme() : localStorage.getItem('theme');
-};
+
 /* --------------------------------- Cookie --------------------------------- */
 
 var setCookie = function setCookie(name, value, expire) {
@@ -161,21 +144,6 @@ var setCookie = function setCookie(name, value, expire) {
 var getCookie = function getCookie(name) {
   var keyValue = document.cookie.match("(^|;) ?".concat(name, "=([^;]*)(;|$)"));
   return keyValue ? keyValue[2] : keyValue;
-};
-var settings = {
-  tinymce: {
-    theme: 'oxide'
-  },
-  chart: {
-    borderColor: 'rgba(255, 255, 255, 0.8)'
-  }
-};
-
-/* -------------------------- Chart Initialization -------------------------- */
-
-var newChart = function newChart(chart, config) {
-  var ctx = chart.getContext('2d');
-  return new window.Chart(ctx, config);
 };
 
 /* ---------------------------------- Store --------------------------------- */
@@ -209,26 +177,6 @@ var getDates = function getDates(startDate, endDate) {
     return new Date(startDate.valueOf() + interval * i);
   });
 };
-var getPastDates = function getPastDates(duration) {
-  var days;
-  switch (duration) {
-    case 'week':
-      days = 7;
-      break;
-    case 'month':
-      days = 30;
-      break;
-    case 'year':
-      days = 365;
-      break;
-    default:
-      days = duration;
-  }
-  var date = new Date();
-  var endDate = date;
-  var startDate = new Date(new Date().setDate(date.getDate() - (days - 1)));
-  return getDates(startDate, endDate);
-};
 
 /* Get Random Number */
 var getRandomNumber = function getRandomNumber(min, max) {
@@ -247,22 +195,16 @@ var utils = {
   rgbaColor: rgbaColor,
   getColor: getColor,
   getColors: getColors,
-  getSubtleColors: getSubtleColors,
   getGrays: getGrays,
   getOffset: getOffset,
   isScrolledIntoView: isScrolledIntoView,
   getBreakpoint: getBreakpoint,
   setCookie: setCookie,
   getCookie: getCookie,
-  newChart: newChart,
-  settings: settings,
   getItemFromStore: getItemFromStore,
   setItemToStore: setItemToStore,
   getStoreSpace: getStoreSpace,
   getDates: getDates,
-  getPastDates: getPastDates,
   getRandomNumber: getRandomNumber,
-  removeClass: removeClass,
-  getSystemTheme: getSystemTheme,
-  isDark: isDark
+  removeClass: removeClass
 };
