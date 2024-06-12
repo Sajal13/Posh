@@ -18955,6 +18955,10 @@ ul {
 /* -------------------------------------------------------------------------- */
 /*                                   Navbar                                   */
 /* -------------------------------------------------------------------------- */
+:root {
+  --posh-top-nav-height: 4.3125rem;
+}
+
 .navbar .nav-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20835,7 +20839,7 @@ p.lead {
 }
 @media (max-width: 991.98px) {
   .navbar-top .navbar-nav-top {
-    padding: 1.2rem 0;
+    padding: 1.2rem 0 1.2rem 4px;
   }
 }
 .navbar-top .navbar-collapse {

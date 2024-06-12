@@ -523,6 +523,45 @@ var formInputFileInit = function formInputFileInit() {
 };
 
 /* -------------------------------------------------------------------------- */
+/*                               Form-Processor                               */
+/* -------------------------------------------------------------------------- */
+
+var formInit = function formInit() {
+  var zforms = document.querySelectorAll('[data-form]');
+  if (zforms.length) {
+    zforms.forEach(function (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var feedbackEl = form.querySelector('.feedback');
+        var formData = {};
+        Array.from(form.elements).forEach(function (el) {
+          if (el.type !== 'submit') {
+            formData[el.name] = el.value;
+          }
+        });
+        window.Email.send({
+          Host: 'smtp.mailtrap.io',
+          Username: 'Your User Name ',
+          Password: 'Your Password',
+          To: formData.email,
+          From: 'you@isp.com',
+          Subject: 'This is the subject',
+          Body: '\n<p>'.concat(formData.name, '</p>\n<p>').concat(formData.message, '</p>\n')
+        })
+        // eslint-disable-next-line no-unused-vars
+        .then(function (_message) {
+          feedbackEl.innerHTML = '<div class=\'alert alert-success alert-dismissible\' role=\'alert\'>\n<button type=\'button\' class=\'btn-close fs--1\' data-bs-dismiss=\'alert\' aria-label=\'Close\'></button>\nYour message has been sent successfully.\n</div>';
+        })
+        // eslint-disable-next-line no-unused-vars
+        ["catch"](function (_error) {
+          feedbackEl.innerHTML = '<div class=\'alert alert-danger alert-dismissible\' role=\'alert\'>\n <button type=\'button\' class=\'btn-close fs--1\' data-bs-dismiss=\'alert\' aria-label=\'Close\'></button>\nYour message not sent.\n</div>';
+        });
+      });
+    });
+  }
+};
+
+/* -------------------------------------------------------------------------- */
 /*                               Form-submission                              */
 /* -------------------------------------------------------------------------- */
 
@@ -1642,10 +1681,10 @@ var lightboxInit = function lightboxInit() {
 var parallaxInit = function parallaxInit() {
   var parallax = document.querySelectorAll('[data-parallax]');
   if (parallax.length && window.Rellax) {
-    parallax.forEach(function (itm) {
-      var options = utils.getData(itm, 'rellax');
-      // eslint-disable-next-line no-unused-vars
-      var rellax = new window.Rellax(itm, _objectSpread(_objectSpread({}, options), {}, {
+    parallax.forEach(function (item) {
+      var options = utils.getData(item, 'rellax');
+      // eslint-disable-next-line no-new
+      new window.Rellax(item, _objectSpread(_objectSpread({}, options), {}, {
         center: true
       }));
     });
@@ -1666,18 +1705,6 @@ var scrollInit = function scrollInit() {
       });
     });
   }
-};
-
-/* -------------------------------------------------------------------------- */
-/*                                 Scrollbars                                 */
-/* -------------------------------------------------------------------------- */
-
-var scrollbarInit = function scrollbarInit() {
-  Array.prototype.forEach.call(document.querySelectorAll('.scrollbar-overlay'), function (el) {
-    return new window.SimpleBar(el, {
-      autoHide: true
-    });
-  });
 };
 
 /*-----------------------------------------------
@@ -1724,46 +1751,55 @@ var swiperInit = function swiperInit() {
     }));
   });
 };
+
+/* -------------------------------------------------------------------------- */
+/*                                  Tabs                                      */
+/* -------------------------------------------------------------------------- */
+
 var tabsInit = function tabsInit() {
   var tabsNavs = document.querySelectorAll('[data-tabs]');
-  function updateIndicator(indicator, tabs, tabnavCurrentItem) {
+  var updateIndicator = function updateIndicator(indicator, tabs, tabnavCurrentItem) {
     var left = tabnavCurrentItem.getBoundingClientRect().left - tabs.getBoundingClientRect().left;
     var right = tabs.offsetWidth - (left + tabnavCurrentItem.offsetWidth);
     indicator.style.left = "".concat(left, "px");
     indicator.style.right = "".concat(right, "px");
-  }
-  tabsNavs.forEach(function (tabs) {
-    var tabnavCurrentItem = tabs.querySelector('.nav-bar-item.active');
-    var indicator = document.createElement('div');
-    indicator.classList.add('indicator');
-    tabs.querySelector('.nav-bar').appendChild(indicator);
-    updateIndicator(indicator, tabs, tabnavCurrentItem);
-    tabs.querySelectorAll('.nav-bar-item').forEach(function (tabnavItem) {
-      tabnavItem.addEventListener('click', function () {
-        var currentIndex = Array.from(tabnavItem.parentNode.children).indexOf(tabnavItem);
-        var tabContent = tabs.querySelector('.tab-contents').children[currentIndex];
-        tabnavItem.parentNode.querySelectorAll('.nav-bar-item').forEach(function (item) {
-          item.classList.remove('active');
+  };
+  if (tabsNavs.length) {
+    tabsNavs.forEach(function (tabs) {
+      var tabnavCurrentItem = tabs.querySelector('.nav-bar-item.active');
+      var indicator = document.createElement('div');
+      indicator.classList.add('indicator');
+      tabs.querySelector('.nav-bar').appendChild(indicator);
+      updateIndicator(indicator, tabs, tabnavCurrentItem);
+      tabs.querySelectorAll('.nav-bar-item').forEach(function (tabnavItem) {
+        tabnavItem.addEventListener('click', function () {
+          var currentIndex = Array.from(tabnavItem.parentNode.children).indexOf(tabnavItem);
+          var tabContent = tabs.querySelector('.tab-contents').children[currentIndex];
+          tabnavItem.parentNode.querySelectorAll('.nav-bar-item').forEach(function (item) {
+            var _item$classList;
+            item === null || item === void 0 || (_item$classList = item.classList) === null || _item$classList === void 0 || _item$classList.remove('active');
+          });
+          tabnavItem.classList.add('active');
+          tabContent.parentNode.querySelectorAll('.tab-content').forEach(function (content) {
+            var _content$classList;
+            content === null || content === void 0 || (_content$classList = content.classList) === null || _content$classList === void 0 || _content$classList.remove('active');
+          });
+          tabContent.classList.add('active');
+          updateIndicator(indicator, tabs, tabnavItem);
+          var preIndex = tabs.getAttribute('data-preIndex');
+          if (currentIndex - preIndex <= 0) {
+            indicator.classList.add('transition-reverse');
+          } else {
+            indicator.classList.remove('transition-reverse');
+          }
+          tabs.setAttribute('data-preIndex', currentIndex);
         });
-        tabnavItem.classList.add('active');
-        tabContent.parentNode.querySelectorAll('.tab-content').forEach(function (content) {
-          content.classList.remove('active');
-        });
-        tabContent.classList.add('active');
-        updateIndicator(indicator, tabs, tabnavItem);
-        var preIndex = tabs.getAttribute('data-preIndex');
-        if (currentIndex - preIndex <= 0) {
-          indicator.classList.add('transition-reverse');
-        } else {
-          indicator.classList.remove('transition-reverse');
-        }
-        tabs.setAttribute('data-preIndex', currentIndex);
+      });
+      window.addEventListener('resize', function () {
+        updateIndicator(indicator, tabs, tabs.querySelector('.nav-bar-item.active'));
       });
     });
-    window.addEventListener('resize', function () {
-      updateIndicator(indicator, tabs, tabs.querySelector('.nav-bar-item.active'));
-    });
-  });
+  }
 };
 
 /* -------------------------------------------------------------------------- */
@@ -1802,7 +1838,6 @@ var typedTextInit = function typedTextInit() {
 docReady(detectorInit);
 docReady(formValidationInit);
 docReady(dropdownOnHover);
-docReady(scrollbarInit);
 docReady(dropdownMenuInit);
 docReady(scrollInit);
 docReady(typedTextInit);
@@ -1817,3 +1852,4 @@ docReady(tabsInit);
 docReady(tooltipInit);
 docReady(formInputFileInit);
 docReady(hamburgerInit);
+docReady(formInit);

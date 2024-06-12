@@ -17,36 +17,25 @@
     <link rel="manifest" href="../assets/images/favicons/manifest.json">
     <meta name="msapplication-TileImage" content="../assets/images/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
-    <script src="../vendors/simplebar/simplebar.min.js"></script>
 
     <!-- ===============================================--><!--    Stylesheets--><!-- ===============================================-->
-    <link href="../assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
-    <link href="../assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
+    <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
-    <link href="../vendors/simplebar/simplebar.min.css" rel="stylesheet">
-    <link href="../assets/css/theme.min.css" rel="stylesheet" id="style-default">
-    <link href="../assets/css/user.min.css" rel="stylesheet" id="user-style-default">
     <link href="../assets/fonts/iconsmind/iconsmind.css" rel="stylesheet">
     <link href="../vendors/hamburgers/hamburgers.css" rel="stylesheet">
+    <link href="../assets/css/theme-rtl.min.css" rel="stylesheet" />
+    <link href="../assets/css/user-rtl.min.css" rel="stylesheet" />
   </head>
 
   <body>
     <!-- ===============================================--><!--    Main Content--><!-- ===============================================-->
     <main class="main" id="top">
       <div data-layout="container">
-        <script>
-          var isFluid = JSON.parse(localStorage.getItem('isFluid'));
-          if (isFluid) {
-            var container = document.querySelector('[data-layout]');
-            container.classList.remove('container');
-            container.classList.add('container-fluid');
-          }
-        </script>
         <div class="content">
           <nav class="navbar navbar-top navbar-expand-lg bg-white border-bottom fixed-top start-0 top-0">
             <div class="container"><a class="navbar-brand" href="../"><img src="../assets/images/posh-logo.png" alt="" width="80" /></a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle navigation" data-hamburger-icon="data-hamburger-icon"><span class="hamburger hamburger--emphatic"><span class="hamburger-box"> <span class="hamburger-inner"></span></span></span></button>
-              <div class="collapse navbar-collapse scrollbar w-100" id="navbarStandard">
+              <div class="collapse navbar-collapse w-100" id="navbarStandard">
                 <ul class="navbar-nav navbar-nav-top justify-content-end flex-1 me-lg-n2" data-top-nav-dropdowns="data-top-nav-dropdowns">
                   <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">Homes<span class="fas fa-chevron-down dropdown-toggle-icon"></span></a>
                     <ul class="dropdown-menu navbar-dropdown-caret">
@@ -264,7 +253,7 @@
                             <div class="row justify-content-center my-5 ps-5 g-0">
                               <div class="col-sm-4"><a class="dropdown-link d-block" href="../components/accordion.html">Accordion</a><a class="dropdown-link d-block" href="../components/alerts.html">Alerts</a><a class="dropdown-link d-block" href="../components/backgrounds.html">Backgrounds</a><a class="dropdown-link d-block" href="../components/badge.html">Badge</a><a class="dropdown-link d-block" href="../components/border-&amp;-radius.html">Border &amp; Radius</a><a class="dropdown-link d-block" href="../components/buttons.html">Buttons</a><a class="dropdown-link d-block" href="../components/cards.html">Cards</a><a class="dropdown-link d-block" href="../components/carousel.html">Carousel</a><a class="dropdown-link d-block" href="../components/colors.html">Colors</a><a class="dropdown-link d-block" href="../components/dropdowns.html">Dropdown &amp; Dropup</a><a class="dropdown-link d-block" href="../components/filter.html">Filter</a></div>
                               <div class="col-sm-4"><a class="dropdown-link d-block" href="../components/forms.html">Form elements</a><a class="dropdown-link d-block" href="../components/grid.html">Grid system</a><a class="dropdown-link d-block" href="../components/layout-helpers.html">Layout helpers</a><a class="dropdown-link d-block" href="../components/icons.html">Icons</a><a class="dropdown-link d-block" href="../components/lightbox.html">Lightbox</a><a class="dropdown-link d-block" href="../components/maps.html">Maps</a><a class="dropdown-link d-block" href="../components/masonry.html">Masonry grid</a><a class="dropdown-link d-block" href="../components/modal-video.html">Modal video</a><a class="dropdown-link d-block" href="../components/modals.html">Modals</a><a class="dropdown-link d-block" href="../components/navigations.html">Navigations</a><a class="dropdown-link d-block" href="../components/navigation-in-page.html">Navigation in page</a></div>
-                              <div class="col-sm-4"><a class="dropdown-link d-block" href="../components/parallax.html">Parallax</a><a class="dropdown-link d-block" href="../components/scrollspy.html">Scrollspy</a><a class="dropdown-link d-block" href="../components/swiper.html">Swiper</a><a class="dropdown-link d-block" href="../components/spacing.html">Spacing</a><a class="dropdown-link d-block" href="../components/tables.html">Tables</a><a class="dropdown-link d-block" href="../components/tabs.html">Tabs</a><a class="dropdown-link d-block" href="../components/tooltips.html">Tooltips</a><a class="dropdown-link d-block" href="../components/typed-text.html">Typed Text</a><a class="dropdown-link d-block" href="../components/typography.html">Typography</a></div>
+                              <div class="col-sm-4"><a class="dropdown-link d-block" href="../components/smtpjs.html">Smtpjs</a><a class="dropdown-link d-block" href="../components/parallax.html">Parallax</a><a class="dropdown-link d-block" href="../components/scrollspy.html">Scrollspy</a><a class="dropdown-link d-block" href="../components/swiper.html">Swiper</a><a class="dropdown-link d-block" href="../components/spacing.html">Spacing</a><a class="dropdown-link d-block" href="../components/tables.html">Tables</a><a class="dropdown-link d-block" href="../components/tabs.html">Tabs</a><a class="dropdown-link d-block" href="../components/tooltips.html">Tooltips</a><a class="dropdown-link d-block" href="../components/typed-text.html">Typed Text</a><a class="dropdown-link d-block" href="../components/typography.html">Typography</a></div>
                             </div>
                           </div>
                         </div>
@@ -302,14 +291,13 @@
           </nav>
 
           <!-- ============================================--><!-- <section> begin ============================-->
-          <section class="py-0">
+          <section class="p-0 has-parallax">
+            <div class="bg-holder overlay overlay-0" style="background-image:url(../assets/images/about-team-header.jpg);" data-rellax-speed="-5" data-parallax="data-parallax"></div><!--/.bg-holder-->
             <div class="container">
-              <div class="row min-vh-lg-100 align-items-end overflow-hidden">
-                <div class="col text-center pt-8">
-                  <h6 class="ls-2 mb-5 text-uppercase">Introducing POSH</h6>
-                  <h2 class="fw-light">Create <span class="text-primary"> <br class="d-sm-none"/><span class="fw-normal typed-text" data-typed-text='["beautiful","gorgeous","outstanding","remarkable","stunning"]'></span><span class="typed-cursor"> </span><br class="d-sm-none" /></span><span class="text-nowrap">  websites</span></h2>
-                  <p class="mt-1 fs-8 text-700 fw-light"> Anything you can design, you can design better. </p><a class="btn btn-primary btn-sm mt-5 ls-1" href="#home-demos">Explore demos</a>
-                  <div class="fs-10 mt-2"> <span class="text-600">or </span><a href="https://themewagon.com/themes/posh"> Purchase POSH &xrarr;</a></div><img class="mt-5 mt-sm-3 mt-md-0 w-100" src="../assets/images/showcase-01.jpg" alt="showcase" />
+              <div class="row min-vh-100 align-items-center py-8">
+                <div class="col-lg-8 col-xl-7">
+                  <h1 class="fs-6 fs-md-4 mb-4 text-white lh-f2"> An award winning creative agency </h1>
+                  <p class="fs-md-7 fst-italic mb-6 pe-xl-6 text-white font-sans-serif lh-2">No matter the task, you will be surprised seeing the final results of your creation and crave for more.</p><a class="btn btn-outline-white" href="#!">Get started</a>
                 </div>
               </div>
             </div><!-- end of .container-->
@@ -318,174 +306,207 @@
 
 
           <!-- ============================================--><!-- <section> begin ============================-->
-          <section class="text-center bg-1100 py-6 py-xl-9" id="home-demos">
+          <section class="py-8">
             <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-lg-10 col-xl-9 text-500">
-                  <div class="fs-7 fw-light"> No matter the task, the new POSH is up to it — and even more. See for yourself — all the pre-made demos, inspired by world's finest websites, are <span class="fw-semi-bold text-white"> made with POSH. </span>And this is only a tip of the iceberg of what you will get.</div>
-                  <hr class="short mt-6 mb-5 mx-auto text-500" />
+              <div class="row">
+                <div class="col-md-8">
+                  <h4 class="mb-0 text-1000">Hello! </h4>
+                  <hr class="short my-3 text-400" />
+                  <p class="text-700 lead">This is POSH. Crafted with Bootstrap 5; Highly Customizable Posh's visual style is simple yet distinct. Customize colors, buttons, typography, gaps, spaces and everything for every single screen sizes individually without writing any CSS at all. With enormous built in layouts, rigorously tested and optimized for laptops, phones, tabs and every other devices; Posh empowers you to design sites in a more flexible and multitudinous way.</p>
+                </div>
+                <div class="col-md-4 ps-lg-5 ps-xl-6 mt-5 mt-md-0">
+                  <h5 class="mb-0 text-1000">What we do </h5>
+                  <hr class="short my-3 text-400" />
+                  <div> <a class="py-1 d-block fw-light link-1100" href="#!">Branding &amp; Strategy </a><a class="py-1 d-block fw-light link-1100" href="#!">Web Design &amp; Development </a><a class="py-1 d-block fw-light link-1100" href="#!">Packaging Design</a><a class="py-1 d-block fw-light link-1100" href="#!">Video &amp; Animation </a><a class="py-1 d-block fw-light link-1100" href="#!">Marketing, SEO and Social Media</a></div>
                 </div>
               </div>
             </div><!-- end of .container-->
           </section><!-- <section> close ============================--><!-- ============================================-->
 
-          <section class="bg-1100 pt-0 text-center sortable" data-sortable="data-sortable">
-            <div class="container-fluid">
-              <div class="row sortable-container" data-isotope='{"layoutMode":"packery"}'>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../homes/landing-nokia.html">
-                    <h6 class="fs-9 mb-3 text-300">Landing NOKIA <span class="mt-2 fs-10 text-400 fw-normal d-block"> (Nokia 5)</span></h6><img src="../assets/images/screenshots/home-landing-nokia.jpg" alt="Generic placeholder image" />
+          <section class="p-0">
+            <div class="container-fluid px-0">
+              <div class="row g-0 font-sans-serif">
+                <div class="col-md-4 col-sm-6"><a href="#!">
+                    <div class="hoverbox"><img src="../assets/images/portfolio/wide-01.jpg" alt="Generic placeholder image" />
+                      <div class="hoverbox-content text-white text-end row align-items-end background-black-30">
+                        <div class="col-sm-12">
+                          <div class="p-4">
+                            <h4 class="text-white mb-0">Responsive </h4>
+                            <p>Supports all screen size</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../homes/digital-agency.html">
-                    <h6 class="fs-9 mb-3 text-300">Digital Agency<span class="d-block mt-2 fs-10 text-400 fw-normal"> (Technext, Green Chameleon)</span></h6><img src="../assets/images/screenshots/home-digital-agency.jpg" alt="Generic placeholder image" />
+                <div class="col-md-4 col-sm-6"><a href="#!">
+                    <div class="hoverbox"><img src="../assets/images/portfolio/wide-02.jpg" alt="Generic placeholder image" />
+                      <div class="hoverbox-content text-white text-end row align-items-end background-black-30">
+                        <div class="col-sm-12">
+                          <div class="p-4">
+                            <h4 class="text-white mb-0">Retina ready</h4>
+                            <p>Pixel perfect to every device</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../homes/travel-agency.html">
-                    <h6 class="fs-9 mb-3 text-300">Travel Agency <span class="d-block mt-2 fs-10 text-400 fw-normal"> (ireland.com)</span></h6><img src="../assets/images/screenshots/home-travel-agency.jpg" alt="Generic placeholder image" />
+                <div class="col-md-4 col-sm-6"><a href="#!">
+                    <div class="hoverbox"><img src="../assets/images/portfolio/wide-03.jpg" alt="Generic placeholder image" />
+                      <div class="hoverbox-content text-white text-end row align-items-end background-black-30">
+                        <div class="col-sm-12">
+                          <div class="p-4">
+                            <h4 class="text-white mb-0">100+ Layouts</h4>
+                            <p>Tested and Optimized with perfection</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../homes/conference.html">
-                    <h6 class="fs-9 mb-3 text-300">Conference<span class="d-block mt-2 fs-10 text-400 fw-normal"> (Chain React)</span></h6><img src="../assets/images/screenshots/home-conference.jpg" alt="Generic placeholder image" />
+                <div class="col-md-4 col-sm-6"><a href="#!">
+                    <div class="hoverbox"><img src="../assets/images/portfolio/wide-04.jpg" alt="Generic placeholder image" />
+                      <div class="hoverbox-content text-white text-end row align-items-end background-black-30">
+                        <div class="col-sm-12">
+                          <div class="p-4">
+                            <h4 class="text-white mb-0">Premium Icons</h4>
+                            <p>Free for lifetime </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../homes/education.html">
-                    <h6 class="fs-9 mb-3 text-300">Education<span class="d-block mt-2 fs-10 text-400 fw-normal"> (American University, Stanford)</span></h6><img src="../assets/images/screenshots/home-education.jpg" alt="Generic placeholder image" />
+                <div class="col-md-4 col-sm-6"><a href="#!">
+                    <div class="hoverbox"><img src="../assets/images/portfolio/wide-05.jpg" alt="Generic placeholder image" />
+                      <div class="hoverbox-content text-white text-end row align-items-end background-black-30">
+                        <div class="col-sm-12">
+                          <div class="p-4">
+                            <h4 class="text-white mb-0">1000+ Features</h4>
+                            <p>Easy to deploy</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../homes/hospital.html">
-                    <h6 class="fs-9 mb-3 text-300">Hospital<span class="d-block mt-2 fs-10 text-400 fw-normal"> (Northwestern Medicine, Columbus Regional Health)</span></h6><img src="../assets/images/screenshots/home-hospital.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../homes/hotel.html">
-                    <h6 class="fs-9 mb-3 text-300">Hotel<span class="d-block mt-2 fs-10 text-400 fw-normal"> (The Peninsula, Trump Hotels)</span></h6><img src="../assets/images/screenshots/home-hotel.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../homes/landing-software.html">
-                    <h6 class="fs-9 mb-3 text-300">Landing Software<span class="d-block mt-2 fs-10 text-400 fw-normal"> (Skype, Dropbox)</span></h6><img src="../assets/images/screenshots/home-landing-software-b5.png" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../homes/personal.html">
-                    <h6 class="fs-9 mb-3 text-300"> Personal</h6><img src="../assets/images/screenshots/home-personal.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../homes/restaurant.html">
-                    <h6 class="fs-9 mb-3 text-300">Restaurant<span class="d-block mt-2 fs-10 text-400 fw-normal"> (The Smoke Haus, Yung Kee)</span></h6><img src="../assets/images/screenshots/home-restaurant.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../homes/shop.html">
-                    <h6 class="fs-9 mb-3 text-300">Shop<span class="d-bloc mt-2 fs-10 text-400 fw-normal"> (Aliexpress, Sammy Dress)</span></h6><img src="../assets/images/screenshots/home-shop.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/about-company.html">
-                    <h6 class="fs-9 mb-3 text-300">About Company</h6><img src="../assets/images/screenshots/page-about-company.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/about-team.html">
-                    <h6 class="fs-9 mb-3 text-300">About Team</h6><img src="../assets/images/screenshots/page-about-team.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/careers.html">
-                    <h6 class="fs-9 mb-3 text-300">Careers</h6><img src="../assets/images/screenshots/page-careers.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/contact-1.html">
-                    <h6 class="fs-9 mb-3 text-300">Contact 1</h6><img src="../assets/images/screenshots/page-contact-1.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/contact-2.html">
-                    <h6 class="fs-9 mb-3 text-300">Contact 2</h6><img src="../assets/images/screenshots/page-contact-2.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/contact-3.html">
-                    <h6 class="fs-9 mb-3 text-300">Contact 3</h6><img src="../assets/images/screenshots/page-contact-3.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/pricing-1.html">
-                    <h6 class="fs-9 mb-3 text-300">Pricing 1</h6><img src="../assets/images/screenshots/page-pricing-1.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/pricing-2.html">
-                    <h6 class="fs-9 mb-3 text-300">Pricing 2</h6><img src="../assets/images/screenshots/page-pricing-2.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/services-1.html">
-                    <h6 class="fs-9 mb-3 text-300"> Services 1</h6><img src="../assets/images/screenshots/page-services-1.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/services-2.html">
-                    <h6 class="fs-9 mb-3 text-300">Services 2</h6><img src="../assets/images/screenshots/page-services-2.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/services-3.html">
-                    <h6 class="fs-9 mb-3 text-300">Services 3</h6><img src="../assets/images/screenshots/page-services-3.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/log-in.html">
-                    <h6 class="fs-9 mb-3 text-300">Log in (Simple)</h6><img src="../assets/images/screenshots/page-log-in.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/log-in-social.html">
-                    <h6 class="fs-9 mb-3 text-300">Log in (With Social)</h6><img src="../assets/images/screenshots/page-log-in-social.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/profile.html">
-                    <h6 class="fs-9 mb-3 text-300">Profile</h6><img src="../assets/images/screenshots/page-profile.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/settings.html">
-                    <h6 class="fs-9 mb-3 text-300">Settings</h6><img src="../assets/images/screenshots/page-settings.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/recovery.html">
-                    <h6 class="fs-9 mb-3 text-300">Account Recovery</h6><img src="../assets/images/screenshots/page-recovery.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/maintenance.html">
-                    <h6 class="fs-9 mb-3 text-300">Maintenance</h6><img src="../assets/images/screenshots/page-maintenance.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/shop-products-list.html">
-                    <h6 class="fs-9 mb-3 text-300">Products List</h6><img src="../assets/images/screenshots/shop-products-list.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/shop-products-grid.html">
-                    <h6 class="fs-9 mb-3 text-300">Products Grid</h6><img src="../assets/images/screenshots/shop-products-grid.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/shop-product-details.html">
-                    <h6 class="fs-9 mb-3 text-300">Product Details</h6><img src="../assets/images/screenshots/shop-product-details.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/shop-cart.html">
-                    <h6 class="fs-9 mb-3 text-300"> Cart</h6><img src="../assets/images/screenshots/shop-cart.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/portfolio-1.html">
-                    <h6 class="fs-9 mb-3 text-300">List Title inside</h6><img src="../assets/images/screenshots/portfolio-1.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/portfolio-2.html">
-                    <h6 class="fs-9 mb-3 text-300">List Title Outside</h6><img src="../assets/images/screenshots/portfolio-2.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/portfolio-3.html'">
-                    <h6 class="fs-9 mb-3 text-300">List Title hover</h6><img src="../assets/images/screenshots/portfolio-3.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/portfolio-details.html">
-                    <h6 class="fs-9 mb-3 text-300">Portfolio Details</h6><img src="../assets/images/screenshots/portfolio-details.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/blog-list.html">
-                    <h6 class="fs-9 mb-3 text-300">Blog list</h6><img src="../assets/images/screenshots/blog-list.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/blog-article.html">
-                    <h6 class="fs-9 mb-3 text-300">Article</h6><img src="../assets/images/screenshots/blog-article.jpg" alt="Generic placeholder image" />
-                  </a></div>
-                <div class="col-6 col-md-4 mb-5 isotope-item"><a class="link-300" href="../pages/portfolio-case-study.html">
-                    <h6 class="fs-9 mb-3 text-300">Case Study</h6><img src="../assets/images/screenshots/portfolio-case-study.jpg" alt="Generic placeholder image" />
+                <div class="col-md-4 col-sm-6"><a href="#!">
+                    <div class="hoverbox"><img src="../assets/images/portfolio/wide-06.jpg" alt="Generic placeholder image" />
+                      <div class="hoverbox-content text-white text-end row align-items-end background-black-30">
+                        <div class="col-sm-12">
+                          <div class="p-4">
+                            <h4 class="text-white mb-0">Detailed Documentation</h4>
+                            <p>With well indented code</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </a></div>
               </div>
             </div>
           </section>
 
           <!-- ============================================--><!-- <section> begin ============================-->
-          <section class="pb-0 lh-3 ls-n1 fw-normal">
+          <section class="py-8">
             <div class="container">
               <div class="row">
-                <div class="col-lg-6 px-5 py-3">
-                  <hr class="text-danger" />
-                  <div class="fs-6">Optimized for every screen size down to a single pixel.</div>
+                <div class="col-md-12 text-center">
+                  <h2>Latest News</h2>
+                  <p class="text-700 fs-8 fw-light fst-italic font-sans-serif">The latest news, thoughts and updates from the team.</p>
+                  <hr class="short text-400 mb-7 mt-4 mx-auto" />
                 </div>
-                <div class="col-lg-6 px-5 py-3">
-                  <hr class="text-danger" />
-                  <div class="fs-6">The most modular layout system on the planet.</div>
+              </div>
+              <div class="card-group">
+                <div class="card flex-1 mb-5 mb-md-0"><a class="overflow-hidden" href="#!"><img class="card-img-top" src="../assets/images/careers-header.jpg" alt="Card image cap" /></a>
+                  <div class="card-body"><a class="link-1100" href="#!">
+                      <h5 class="fs-8 fw-semi-bold">Career Monogamy: The Awkward Tech Sin of</h5>
+                    </a>
+                    <p class="card-text text-800 fw-light">Posh is the Best Template in the market you can find. Built with Bootstrap 5 and all other state of the earth cutting edge frontend technologies. </p>
+                  </div>
+                  <div class="card-footer border-top-0">
+                    <div class="d-flex align-items-center"><img class="d-flex me-3 rounded-circle" src="../assets/images/portraits/square/02.jpg" alt="Generic placeholder image" style="max-width: 50px;" />
+                      <div class="lh-1"><a class="link-1100" href="#!">
+                          <h6 class="mb-0">Matt Stauffer</h6><span class="fs-10 text-700">May 23 &middot; 6 min read</span>
+                        </a></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-lg-6 px-5 py-3">
-                  <hr class="text-danger" />
-                  <div class="fs-6">More powerful than most HTML5 templates.</div>
+                <div class="card flex-1 mb-5 mb-md-0"><a class="overflow-hidden" href="#!"><img class="card-img-top" src="../assets/images/generic-06.jpg" alt="Card image cap" /></a>
+                  <div class="card-body"><a class="link-1100" href="#!">
+                      <h5 class="fs-8 fw-semi-bold">Functionality vs Emotions in Mobile Interface</h5>
+                    </a>
+                    <p class="card-text text-800 fw-light">It is packed with tremendous amount of well designed elements and detailed documentation of each of them. </p>
+                  </div>
+                  <div class="card-footer border-top-0">
+                    <div class="d-flex align-items-center"><img class="d-flex me-3 rounded-circle" src="../assets/images/portraits/square/03.jpg" alt="Generic placeholder image" style="max-width: 50px;" />
+                      <div class="lh-1"><a class="link-1100" href="#!">
+                          <h6 class="mb-0">Laura Elizabeth</h6><span class="fs-10 text-700">May 28 &middot; 15 min read</span>
+                        </a></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-lg-6 px-5 py-3">
-                  <hr class="text-danger" />
-                  <div class="fs-6">Bootstrap 5 takes POSH to a whole new level.</div>
+                <div class="card flex-1 mb-5 mb-md-0"><a class="overflow-hidden" href="#!"><img class="card-img-top" src="../assets/images/about-team-header.jpg" alt="Card image cap" /></a>
+                  <div class="card-body"><a class="link-1100" href="#!">
+                      <h5 class="fs-8 fw-semi-bold">How has social media shaped contemporary design?</h5>
+                    </a>
+                    <p class="card-text text-800 fw-light">A multiverse template with modularity at core that gives you the power to make sites in no time with minimum coding.</p>
+                  </div>
+                  <div class="card-footer border-top-0">
+                    <div class="d-flex align-items-center"><img class="d-flex me-3 rounded-circle" src="../assets/images/portraits/square/04.jpg" alt="Generic placeholder image" style="max-width: 50px;" />
+                      <div class="lh-1"><a class="link-1100" href="#!">
+                          <h6 class="mb-0">Michele Hansen</h6><span class="fs-10 text-700">June 02 &middot; 4 min read</span>
+                        </a></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div><!-- end of .container-->
           </section><!-- <section> close ============================--><!-- ============================================-->
 
-
+          <section class="p-0">
+            <div class="container-fluid px-0">
+              <div class="row align-items-center align-items-stretch mx-0">
+                <div class="col-xl-4 d-none d-lg-block position-relative">
+                  <div class="bg-holder" style="background-image:url(../assets/images/digital-agency-testimonial.jpg);"></div><!--/.bg-holder-->
+                </div>
+                <div class="col-xl-4 col-lg-6 bg-1000 text-white px-0"><img class="mx-0 my-0" src="../assets/images/book.jpg" alt="Generic placeholder image" />
+                  <div class="px-4 py-7 col-10 offset-1">
+                    <p class="text-300 fs-7 fst-italic pb-5 font-sans-serif">"Whether you’re building a welcome mat for your SaaS or a clean, agency portfolio, Posh has your design needs covered."</p>
+                    <hr class="short text-800" />
+                    <h6 class="text-300 fw-normal">Graeme Dunn, InsideAsia Tours</h6>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 text-center bg-1100">
+                  <div class="row align-items-center py-5 py-lg-8">
+                    <div class="col">
+                      <h6 class="text-400 text-uppercase fs-9">Featured on</h6>
+                      <hr class="short text-800 mb-6 mx-auto" /><img class="d-block mx-auto px-5 mb-5" src="../assets/images/partners/fwa.png" alt="" /><img class="d-block mx-auto px-5 mb-5" src="../assets/images/partners/awwwards.png" alt="" /><img class="d-block mx-auto px-5 mb-5" src="../assets/images/partners/designawards.png" alt="" /><img class="d-block mx-auto px-5" src="../assets/images/partners/webdesigner.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           <!-- ============================================--><!-- <section> begin ============================-->
-          <section class="text-center py-0">
+          <section class="d-none d-md-block py-5">
             <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-lg-8 col-xl-8 py-8">
-                  <hr class="short text-500 mb-6 mx-auto" />
-                  <p class="fs-8 text-1100 fw-light">Want to see the magic? Start creating with POSH</p><a class="btn btn-outline-primary mt-3 ls-sm" href="https://themewagon.com/themes/posh/">Purchase now</a>
+              <div class="row">
+                <div class="col-12">
+                  <div class="swiper-theme-container theme-slider" data-swiper-theme-container="data-swiper-theme-container">
+                    <div class="swiper" data-swiper='{"spaceBetween":100,"loop":true,"loopedSlides":5,"autoplay":true,"breakpoints":{"0":{"slidesPerView":2},"600":{"slidesPerView":4},"1000":{"slidesPerView":6}}}'>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"> <img class="rounded-sm object-fit-cover" src="../assets/images/partners/partner-3.png" alt="Generic placeholder image" /></div>
+                        <div class="swiper-slide"> <img class="rounded-sm object-fit-cover" src="../assets/images/partners/partner-5.png" alt="Generic placeholder image" /></div>
+                        <div class="swiper-slide"> <img class="rounded-sm object-fit-cover" src="../assets/images/partners/partner-6.png" alt="Generic placeholder image" /></div>
+                        <div class="swiper-slide"> <img class="rounded-sm object-fit-cover" src="../assets/images/partners/partner-7.png" alt="Generic placeholder image" /></div>
+                        <div class="swiper-slide"> <img class="rounded-sm object-fit-cover" src="../assets/images/partners/partner-3.png" alt="Generic placeholder image" /></div>
+                        <div class="swiper-slide"> <img class="rounded-sm object-fit-cover" src="../assets/images/partners/partner-5.png" alt="Generic placeholder image" /></div>
+                        <div class="swiper-slide"> <img class="rounded-sm object-fit-cover" src="../assets/images/partners/partner-6.png" alt="Generic placeholder image" /></div>
+                        <div class="swiper-slide"> <img class="rounded-sm object-fit-cover" src="../assets/images/partners/partner-7.png" alt="Generic placeholder image" /></div>
+                      </div>
+                    </div>
+                    <div class="swiper-nav">
+                      <div class="swiper-button-next"> </div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div><!-- end of .container-->
@@ -509,17 +530,8 @@
     <script src="../vendors/popper/popper.min.js"></script>
     <script src="../vendors/bootstrap/bootstrap.min.js"></script>
     <script src="../vendors/is/is.min.js"></script>
-    <script src="../vendors/imagesloaded/imagesloaded.pkgd.js"> </script>
-    <script src="../vendors/typed.js/typed.umd.js"></script>
-    <script src="../vendors/isotope-layout/isotope.pkgd.min.js"> </script>
-    <script src="../vendors/isotope-packery/packery-mode.pkgd.min.js"></script>
-    <script>
-      const styleDefault = document.querySelector('link#style-default');
-      const userStyleDefault = document.querySelectorAll('link#user-style-default')
-
-      styleDefault?.parentNode?.removeChild(styleDefault);
-      userStyleDefault?.parentNode?.removeChild(userStyleDefault);
-    </script>
+    <script src="../vendors/rellax/rellax.js"></script>
+    <script src="../vendors/swiper/swiper-bundle.min.js"> </script>
     <script src="../vendors/fontawesome/all.min.js"></script>
     <script src="../vendors/lodash/lodash.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
